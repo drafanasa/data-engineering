@@ -5,7 +5,7 @@ Welcome to my Data Engineer Portfolio! This is where I store and share labs comp
 - SQL
 - ETL & Data Pipelines
 
-#============================================================================================
+==================================================
 
 PROJECTS OVERVIEW
 Lab 1 - [Lab name]
@@ -23,14 +23,14 @@ Lab 3 - [Lab name]
 - Key skills: [List of skills].
 - Outcome: [Summary of key results].
 
-#============================================================================================
+==================================================
 
 GETTING STARTED
 - Clone Repository: git clone https://github.com/your-username/data-engineer-portfolio.git
 - Install Dependencies (if required): pip install -r requirements.txt
 - Open Jupyter Notebook (if applicable): jupyter notebook
 
-#============================================================================================
+==================================================
 
 CONTRIBUTING
 - Fork the repository.
@@ -38,7 +38,9 @@ CONTRIBUTING
 - Commit your changes.
 - Submit a Pull Request.
 
-#============================================================================================
+
+==================================================
+
 CONTACT
 - For any feedback or contributions, please open an Issue or submit a Pull Request on GitHub.
 - Note: These labs are conducted in a learning environment for skill development purposes in Data Engineering.

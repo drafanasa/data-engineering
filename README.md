@@ -10,6 +10,7 @@ Chào mừng đến với Portfolio Data Engineer của mình! Đây là nơi m�
 **`Description:`**
 - Lab thuộc khóa "Google Advanced Data Analytics Professional Certificate" trên Coursera.
 - Mục tiêu là phân tích dữ liệu và phát triển mô hình machine learning dự đoán churn người dùng trên ứng dụng Waze..
+- [View](https://github.com/drafanasa/data-engineer-portfolio/tree/c5baab74a7d5c145f396f9d03dde6e5c87981f93/coursera-labs/lab1) 
   
 **`Key skills:`**
 - Python (Pandas, NumPy, Matplotlib, Scikit-learn)
@@ -21,15 +22,23 @@ Chào mừng đến với Portfolio Data Engineer của mình! Đây là nơi m�
 - Xây dựng mô hình machine learning dự đoán churn.
 - Đề xuất chiến lược giảm churn và tăng trưởng người dùng.
 
-### Lab 2 - [Lab name]
+
+### Lab 2 - Numpy & Pandas Labs - Data Analysis Practice
 **`Description:`** 
-[Brief description of Lab].
+- Đây là chuỗi bài tập thực hành với Python, tập trung vào thư viện Numpy và Pandas. 
+- Các bài tập nhằm mục tiêu giúp làm quen với thao tác dữ liệu, xử lý dữ liệu thiếu, và phân tích dữ liệu cơ bản từ các file CSV.
+- [View](https://github.com/drafanasa/data-engineer-portfolio/tree/c5baab74a7d5c145f396f9d03dde6e5c87981f93/coursera-labs/lab2) 
 
 **`Key skills:`** 
-[List of skills].
+- Python (Numpy, Pandas)
+- Jupyter Notebook
+- Xử lý và phân tích dữ liệu CSV
+- Thực hiện các phép toán ma trận, thống kê cơ bản, và xử lý dữ liệu thiếu
 
 **`Outcome:`** 
-[Summary of key results].
+- Thành thạo các thao tác cơ bản với Numpy và Pandas.
+- Nắm được cách đọc, xử lý và phân tích dữ liệu từ các file CSV.
+- Xây dựng nền tảng vững chắc cho các bài tập xử lý dữ liệu nâng cao sau này.
 
 ### Lab 3 - [Lab name]
 **`Description:`** 

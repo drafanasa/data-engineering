@@ -1,6 +1,6 @@
-# DATA ENGINEER PORFOLIO
+# DATA ENGINEER PORTFOLIO
 
-Chào mừng đến với Portfolio Data Engineer của mình! Đây là nơi mình lưu trữ và chia sẻ các labs đã hoàn thành từ Coursera, tập trung vào các kỹ năng cốt lõi như:
+Chào mừng đến với Portfolio của mình! Đây là nơi mình lưu trữ và chia sẻ các labs đã hoàn thành từ Coursera, tập trung vào các kỹ năng cốt lõi như:
 - Python
 - SQL
 - ETL & Data Pipelines

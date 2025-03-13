@@ -9,7 +9,7 @@ Chào mừng đến với Portfolio Data Engineer của mình! Đây là nơi m�
 ### Lab 1 - Waze Lab - Dự đoán Churn Người Dùng
 **`Description:`**
 - Lab thuộc khóa "Google Advanced Data Analytics Professional Certificate" trên Coursera.
-- Mục tiêu là phân tích dữ liệu và phát triển mô hình machine learning dự đoán churn người dùng trên ứng dụng Waze..
+- Mục tiêu là phân tích dữ liệu và phát triển mô hình machine learning dự đoán churn người dùng trên ứng dụng Waze.
 - [View](https://github.com/drafanasa/data-engineer-portfolio/tree/c5baab74a7d5c145f396f9d03dde6e5c87981f93/coursera-labs/lab1) 
   
 **`Key skills:`**

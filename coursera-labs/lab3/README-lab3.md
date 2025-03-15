@@ -42,4 +42,4 @@
 **`General Outcome:`**
 - Nắm vững cách sử dụng Python với **Requests** và **BeautifulSoup** để thu thập dữ liệu từ web.  
 - Xử lý và phân tích dữ liệu thu thập được bằng **Pandas**.  
-- Thành thạo trong việc lưu trữ dữ liệu và tối ưu code web scraping.  
+- Thành thạo trong việc lưu trữ dữ liệu và tối ưu code web scraping.

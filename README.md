@@ -1,6 +1,6 @@
 # DATA ENGINEER PORTFOLIO
 
-Đây là nơi mình lưu trữ và chia sẻ các lab học tập từ Coursera và Udemy, tập trung vào các kỹ năng cốt lõi: **Python**, **SQL**,**ETL & Data Pipelines**.
+Đây là nơi mình lưu trữ và chia sẻ các lab học tập từ Coursera và Udemy, tập trung vào các kỹ năng cốt lõi: **Python**, **SQL**, **ETL & Data Pipelines**.
 
 ## PROJECTS OVERVIEW
 ### Lab 1 - Waze Lab - Dự đoán Churn Người Dùng
@@ -22,7 +22,7 @@
 
 ### Lab 2 - Numpy & Pandas Labs - Data Analysis Practice
 **`Description:`** 
-- Bài tập thực hành với **Python**, tập trung vào **thư viện Numpy** và **Pandas**. 
+- Bài tập thực hành với **Python** cung cấp bởi ChatGPT, tập trung vào **thư viện Numpy** và **Pandas**. 
 - Làm quen với thao tác dữ liệu, xử lý missing values, và phân tích dữ liệu cơ bản từ các file dataset CSV.
 - [View](https://github.com/drafanasa/de-portfolio/tree/32353a1b4ae65363ed4dc74f070a513aeeb11715/coursera-labs/lab2) 
 

@@ -44,7 +44,7 @@ Chào mừng đến với Portfolio của mình! Đây là nơi mình lưu trữ
 **`Description:`** 
 - Đây là bài tập thực hành với Python, tập trung vào Web Scraping để thu thập dữ liệu từ một static website.
 - Mục tiêu là thu thập và phân tích dữ liệu về sách từ website books.toscrape.com.
-[View](https://github.com/drafanasa/de-portfolio/tree/32353a1b4ae65363ed4dc74f070a513aeeb11715/coursera-labs/lab3) 
+- [View](https://github.com/drafanasa/de-portfolio/tree/32353a1b4ae65363ed4dc74f070a513aeeb11715/coursera-labs/lab3) 
 
 **`Key skills:`** 
 - Python (Requests, BeautifulSoup, Pandas)

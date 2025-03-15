@@ -44,4 +44,4 @@
 **`General Outcome:`**
 - Dùng **Python Requests** và **BeautifulSoup** thông qua **Proxy/Authenticate** để web scraping.
 - Xử lý và phân tích data thu thập được bằng **Pandas** dataframe.
-- Lưu trữ data trích xuất được và tối ưu code web scraping.
+- Lưu trữ data trích xuất được và tối ưu code web scraping. 

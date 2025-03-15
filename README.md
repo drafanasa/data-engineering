@@ -40,7 +40,34 @@ Chào mừng đến với Portfolio của mình! Đây là nơi mình lưu trữ
 - Nắm được cách đọc, xử lý và phân tích dữ liệu từ các file CSV.
 - Xây dựng nền tảng vững chắc cho các bài tập xử lý dữ liệu nâng cao sau này.
 
-### Lab 3 - [Lab name]
+### Lab 3 - Web Scraping Lab - Book Data Extraction
+**`Description:`** 
+- Đây là bài tập thực hành với Python, tập trung vào Web Scraping để thu thập dữ liệu từ một static website.
+- Mục tiêu là thu thập và phân tích dữ liệu về sách từ website books.toscrape.com.
+
+**`Key skills:`** 
+- Python (Requests, BeautifulSoup, Pandas)
+- Jupyter Notebook
+- Web Scraping
+- Xử lý, lưu trữ dữ liệu thu thập được
+
+**`Outcome:`** 
+- Nắm vững cách sử dụng Python với Requests và BeautifulSoup để thu thập dữ liệu từ web.
+- Xử lý và phân tích dữ liệu thu thập được bằng Pandas.
+- Thành thạo trong việc lưu trữ dữ liệu và tối ưu code web scraping.
+- Xây dựng nền tảng cho các dự án thu thập và phân tích dữ liệu web phức tạp hơn sau này.
+
+### Lab 4 - [Lab name]
+**`Description:`** 
+[Brief description of Lab].
+
+**`Key skills:`** 
+[List of skills].
+
+**`Outcome:`** 
+[Summary of key results].
+
+### Lab 5 - [Lab name]
 **`Description:`** 
 [Brief description of Lab].
 

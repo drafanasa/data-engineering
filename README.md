@@ -10,7 +10,7 @@ Chào mừng đến với Portfolio của mình! Đây là nơi mình lưu trữ
 **`Description:`**
 - Lab thuộc khóa "Google Advanced Data Analytics Professional Certificate" trên Coursera.
 - Mục tiêu là phân tích dữ liệu và phát triển mô hình machine learning dự đoán churn người dùng trên ứng dụng Waze.
-- [View](https://github.com/drafanasa/data-engineer-portfolio/tree/c5baab74a7d5c145f396f9d03dde6e5c87981f93/coursera-labs/lab1) 
+- [View](https://github.com/drafanasa/de-portfolio/tree/32353a1b4ae65363ed4dc74f070a513aeeb11715/coursera-labs/lab1) 
   
 **`Key skills:`**
 - Python (Pandas, NumPy, Matplotlib, Scikit-learn)
@@ -27,7 +27,7 @@ Chào mừng đến với Portfolio của mình! Đây là nơi mình lưu trữ
 **`Description:`** 
 - Đây là chuỗi bài tập thực hành với Python, tập trung vào thư viện Numpy và Pandas. 
 - Các bài tập nhằm mục tiêu giúp làm quen với thao tác dữ liệu, xử lý dữ liệu thiếu, và phân tích dữ liệu cơ bản từ các file CSV.
-- [View](https://github.com/drafanasa/data-engineer-portfolio/tree/c5baab74a7d5c145f396f9d03dde6e5c87981f93/coursera-labs/lab2) 
+- [View](https://github.com/drafanasa/de-portfolio/tree/32353a1b4ae65363ed4dc74f070a513aeeb11715/coursera-labs/lab2) 
 
 **`Key skills:`** 
 - Python (Numpy, Pandas)
@@ -44,6 +44,7 @@ Chào mừng đến với Portfolio của mình! Đây là nơi mình lưu trữ
 **`Description:`** 
 - Đây là bài tập thực hành với Python, tập trung vào Web Scraping để thu thập dữ liệu từ một static website.
 - Mục tiêu là thu thập và phân tích dữ liệu về sách từ website books.toscrape.com.
+[View](https://github.com/drafanasa/de-portfolio/tree/32353a1b4ae65363ed4dc74f070a513aeeb11715/coursera-labs/lab3) 
 
 **`Key skills:`** 
 - Python (Requests, BeautifulSoup, Pandas)

@@ -8,7 +8,6 @@
 - Python (Requests, BeautifulSoup, Pandas)
 - Jupyter Notebook
 - Web Scraping
-- Xử lý và phân tích dữ liệu thu thập được
 
 ---
 
@@ -37,7 +36,6 @@
 
 ## Datasets Extracted:
 - **`bookstoscrape_all_book_data.csv`**: Dữ liệu chi tiết về tất cả các đầu trên `books.toscrape.com`.  
-- **`bookstoscrape_one_book_data.csv`**: Dữ liệu chi tiết của một đầu sách duy nhất từ website.
 
 ---
 
@@ -45,4 +43,3 @@
 - Nắm vững cách sử dụng Python với **Requests** và **BeautifulSoup** để thu thập dữ liệu từ web.  
 - Xử lý và phân tích dữ liệu thu thập được bằng **Pandas**.  
 - Thành thạo trong việc lưu trữ dữ liệu và tối ưu code web scraping.  
-- Xây dựng nền tảng cho các dự án thu thập và phân tích dữ liệu web phức tạp hơn sau này.

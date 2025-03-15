@@ -1,8 +1,8 @@
-# Web Scraping Lab - Book Data Extraction
+# Web Scraping Lab - Book Data Extraction (Static Web)
 
 **`Description:`**
-- Đây là bài tập thực hành với Python, tập trung vào **Web Scraping** để thu thập dữ liệu từ một static website.
-- Mục tiêu là thu thập và phân tích dữ liệu về sách từ website `books.toscrape.com`.
+- Lab thuộc khóa **"Complete Python Web Scraping : Real Projects & Modern Tools"** trên Udemy.
+- Tập trung vào **Web Scraping** để thu thập data từ một static website mẫu là `books.toscrape.com`
 
 **`Key skills:`**
 - Python (Requests, BeautifulSoup, Pandas)
@@ -12,34 +12,36 @@
 ---
 
 ## Book Data Extraction - Single Book
-- Scraping dữ liệu từ **một đầu sách cụ thể** trên `books.toscrape.com`.
+- Scraping data từ **một đầu sách cụ thể** trên `books.toscrape.com`.
 - Các thông tin thu thập bao gồm: tiêu đề sách, giá, tình trạng tồn kho, đánh giá,..
 
 **`Outcome:`**
-- Hiểu cách sử dụng **Requests** và **BeautifulSoup** để thu thập dữ liệu từ một static website.  
-- Lưu trữ dữ liệu thu thập được vào DataFrame và xuất ra file CSV bằng **Pandas**.  
+- Hiểu cách sử dụng **Requests** và **BeautifulSoup** để thu thập data từ một static website.  
+- Lưu trữ data thu thập được vào DataFrame và xuất ra file CSV bằng **Pandas**.  
 
 ---
 
 ## Book Data Extraction - All Books
-- Scraping dữ liệu từ **tất cả các đầu sách** trên `books.toscrape.com`.
-- Thu thập các thông tin như tiêu đề, giá, tình trạng tồn kho, đánh giá,.. cho mỗi đầu sách trên toàn bộ website.
-- Lưu trữ dữ liệu thu thập được vào DataFrame và xuất ra file CSV bằng **Pandas**. 
+- Gửi requests đến website `books.toscrape.com` thông qua Proxy/Authenticate.
+- Scraping data từ **tất cả các đầu sách** trên tất cả các page của website .
+- Thu thập các thông tin như tiêu đề, giá, tình trạng tồn kho, đánh giá,.. cho mỗi đầu sách.
+- Lưu trữ data thu thập được vào DataFrame và xuất ra file CSV bằng **Pandas**. 
 
 **`Outcome:`**
-- Tự động hóa quá trình thu thập dữ liệu trên nhiều trang.  
-- Tìm, lọc và lấy dữ liệu mong muốn từ static website.  
+- Tự động hóa quá trình thu thập data trên nhiều trang.  
+- Tìm, lọc và lấy data mong muốn từ static website.  
 - Tối ưu code để tránh bị chặn bởi website và tránh lỗi.  
-- Lưu trữ dữ liệu thu thập được dưới dạng file CSV để phân tích về sau.
+- Lưu trữ data thu thập được dưới dạng file CSV để phân tích về sau.
 
 ---
 
-## Datasets Extracted:
-- **`bookstoscrape_all_book_data.csv`**: Dữ liệu chi tiết về tất cả các đầu trên `books.toscrape.com`.  
+## Data Extracted:
+- **`book_data.csv`**: Dataset về tất cả các đầu sách trên `books.toscrape.com`. 
+- **`book_images`**: Hình ảnh tất cả các đầu sách trên `books.toscrape.com`.
 
 ---
 
 **`General Outcome:`**
-- Nắm vững cách sử dụng Python với **Requests** và **BeautifulSoup** để thu thập dữ liệu từ web.  
-- Xử lý và phân tích dữ liệu thu thập được bằng **Pandas**.  
-- Thành thạo trong việc lưu trữ dữ liệu và tối ưu code web scraping.
+- Dùng **Python Requests** và **BeautifulSoup** thông qua **Proxy/Authenticate** để web scraping.
+- Xử lý và phân tích data thu thập được bằng **Pandas** dataframe.
+- Lưu trữ data trích xuất được và tối ưu code web scraping.

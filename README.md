@@ -35,10 +35,10 @@
 - Thành thạo cơ bản Numpy và Pandas.
 - Đọc, xử lý và phân tích dữ liệu từ các file dataset CSV.
 
-### Lab 3 - Web Scraping Lab - Book Data Extraction
+### Lab 3 - Web Scraping Lab - Book Data Extraction (Static Web) 
 **`Description:`** 
 - Lab thuộc khóa **"Complete Python Web Scraping : Real Projects & Modern Tools"** trên Udemy.
-- Tập trung vào **Web Scraping** để thu thập dữ liệu từ một static website mẫu là books.toscrape.com
+- Tập trung vào **Web Scraping** để thu thập data từ một static website mẫu là `books.toscrape.com`
 - [View](https://github.com/drafanasa/de-portfolio/tree/32353a1b4ae65363ed4dc74f070a513aeeb11715/coursera-labs/lab3) 
 
 **`Key skills:`** 
@@ -47,9 +47,9 @@
 - Web Scraping
 
 **`Outcome:`** 
-- Dùng Python Requests và BeautifulSoup để thu thập dữ liệu từ static website.
-- Xử lý và phân tích dữ liệu thu thập được bằng Pandas.
-- Thành thạo trong việc lưu trữ dữ liệu và tối ưu code web scraping.
+- Dùng Python Requests và BeautifulSoup thông qua Proxy/Authenticate để web scraping.
+- Xử lý và phân tích data thu thập được bằng Pandas dataframe.
+- Lưu trữ data trích xuất được và tối ưu code web scraping.
 
 ### Lab 4 - [Lab name]
 **`Description:`** 

@@ -7,7 +7,7 @@
 **`Key skills:`**
 - Python (Requests, BeautifulSoup, Pandas)
 - Jupyter Notebook
-- Web Scraping
+- Web Scraping 
 
 ---
 

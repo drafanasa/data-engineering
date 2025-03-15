@@ -74,7 +74,7 @@
 ## GETTING STARTED
 - Clone Repository: git clone https://github.com/your-username/data-engineer-portfolio.git
 - Install Dependencies (if required): pip install -r requirements.txt
-- Open Jupyter Notebook (if applicable): jupyter notebook
+- Open Jupyter Notebook (if applicable): jupyter notebook 
 
 ## CONTRIBUTING
 - Fork the repository.

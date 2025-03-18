@@ -88,7 +88,6 @@ for proxy in proxy_list:
         
 # Khởi tạo dictionary để đếm lỗi của từng proxy
 proxy_errors = {proxy: 0 for proxy in working_proxies}
-print('Khởi tạo dictionary để đếm lỗi của từng proxy --> Done')
 
 # Xử lý nếu working_proxies rỗng trước khi chạy vòng lặp scraping để tránh lỗi vào scrap mà không có proxy khả dụng
 if not working_proxies:

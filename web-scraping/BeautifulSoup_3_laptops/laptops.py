@@ -19,10 +19,26 @@ output_folder = 'output'
 os.makedirs(output_folder, exist_ok=True)  # Tạo folder output
 
 # Khởi tạo Fake User-Agent để tránh bị chặn
-headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36'}
+headers = {
+    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
+    "DNT": "1",
+    "Referer": "https://www.ebay.com/",
+    "Upgrade-Insecure-Requests": "1",
+    "Connection": "keep-alive",
+}
+
+# Khởi tạo cookies để tránh bị chặn
+cookies = {
+    "ebay": "%5Ejs%3D1%5Esbf%3D%23000000%5E",
+    "nonsession": "BAQAAAZRXz2gmAAaAADMAAWm6PHg/AMoAIGubb/g4ZmQzMTQ3YzE5NTBhOGNkZjdjMDI4MzFmZmZmZTgzNADLAAJn2RAAMTP+NzAsL+9tsYSVG7bSOk7IiejziQ**",
+    "s": "CgADuAJFn2XkcMwZodHRwczovL3d3dy5lYmF5LmNvbS9zY2gvaS5odG1sP19kY2F0PTE3NyZfZnNycD0xJnJ0PW5jJl9mcm9tPVI0MCZSQU0lMjUyMFNpemU9MzIlMjUyMEdCJl9ua3c9bGFwdG9wJl9zYWNhdD0wJlNTRCUyNTIwQ2FwYWNpdHk9MSUyNTIwVEImX3Bnbj0xBwD4ACBn2V2TOGZkMzE0N2MxOTUwYThjZGY3YzAyODMxZmZmZmU4MzQgt8aX",
+}
 
 # Đọc danh sách proxy từ file proxy_list.txt và loại bỏ dòng trống
-with open('proxy_list.txt', 'r') as p:
+with open('/workspaces/data-engineer-portfolio/web-scraping/BeautifulSoup_3_laptops/proxy_list.txt', 'r') as p:
     proxy_list = [proxy.strip() for proxy in p if proxy.strip()]
 
 # Khởi tạo danh sách chứa các proxy đang hoạt động
@@ -44,7 +60,7 @@ for proxy in proxy_list:
 
     # Thiết lập try-except nâng cao để kiểm tra trạng thái và xử lý lỗi
     try:
-        time.sleep(random.uniform(0.05, 0.2)) # Thêm độ trễ từ 0.05 đến 0.3 giây trước khi gửi requests (thời gian ngắn để giảm tải cho quá trình test proxy)
+        time.sleep(random.uniform(3, 7)) # Thêm độ trễ từ 0.05 đến 0.3 giây trước khi gửi requests (thời gian ngắn để giảm tải cho quá trình test proxy)
         response = requests.get(test_proxy_url, proxies=proxies, headers=headers, timeout=20)
         soup = BeautifulSoup(response.text, 'html.parser')
         response.raise_for_status() # Nếu gặp lỗi HTTP (403, 500, ...) thì raise lỗi
@@ -96,7 +112,7 @@ while True:
         }
         
         try:
-            time.sleep(random.uniform(1, 3)) # Thêm độ trễ ngẫu nhiên từ 1 đến 3 giây trước khi gửi requests
+            time.sleep(random.uniform(3, 7)) # Thêm độ trễ ngẫu nhiên từ 3 đến 7 giây trước khi gửi requests
             response = requests.get(page_url, proxies=proxies, headers=headers, timeout=20)
             if response.status_code == 200:
                 print(f"Request thành công với proxy: {proxy}")
@@ -172,11 +188,11 @@ while True:
     next_as_button = soup.find('button', class_='pagination__next')
 
     # Dùng code này nếu muốn vòng lặp dừng sau khi scrap xong page đầu tiên, chỉ để test cho nhanh
-    if next_as_button is not None:
+    if next_as_button is None:
         break
 
     # Dùng code này nếu muốn vòng lặp dừng sau khi scrap xong TẤT CẢ CÁC PAGE có data sản phẩm
-    #if next_as_button is None or next_as_button.get('aria-disabled') == 'true': # Kiểm tra nếu nút 'Next' bị vô hiệu hóa hoặc không tồn tại
+    #if next_as_button is not None or next_as_button.get('aria-disabled') == 'true': # Kiểm tra nếu nút 'Next' bị vô hiệu hóa hoặc không tồn tại
     #   print("✅ Không còn trang tiếp theo. Kết thúc scraping.")
     #    break
 

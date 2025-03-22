@@ -3,5 +3,5 @@ numpy
 rich
 requests
 beautifulsoup4
-random
-time
+selenium
+webdriver-manager

@@ -15,9 +15,9 @@
 
 # Import các thư viện cần thiết
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager # Dùng webdriver-manager để tự động tải ChromeDriver phù hợp với phiên bản Chrome và môi trường linux64 của Codespace Github
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager # Dùng webdriver-manager để tự động tải ChromeDriver phù hợp với phiên bản Chrome và môi trường linux64 của Codespace Github
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -39,27 +39,21 @@ author_data_dict = {
 author_pages = []
 
 # Cấu hình options của ChromeDriver 
-service = Service(ChromeDriverManager().install())  # Đảm bảo sử dụng ChromeDriverManager ở đây (thay cho việc dùng path dẫn đến ChromeDriver.exe khi chạy trên máy tính win64
 options = Options()
 
-# Thêm User-Agent vào options
+# Thêm options User-Agent vào options
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
 options.add_argument(f"user-agent={user_agent}")
 
 # Thêm các options tối ưu Selenium 4
 options.binary_location = "/usr/bin/google-chrome"  # Đường dẫn Chrome trên Linux
-options.add_argument("--start-maximized")  # Mở trình duyệt toàn màn hình
-options.add_argument("--disable-infobars")  # Tắt thông báo "Chrome is being controlled"
-options.add_argument("--disable-popup-blocking")  # Ngăn chặn popup
-options.add_experimental_option("detach", True)  # Giữ trình duyệt mở sau khi script kết thúc
-
-# Thêm vào options để tránh xung đột session
-options.add_argument("--user-data-dir=/tmp/chrome-profile")  # Sử dụng thư mục tạm để tránh xung đột
-options.add_argument("--no-sandbox")  # Chạy trong môi trường không bảo vệ
-options.add_argument("--disable-dev-shm-usage")  # Giảm rủi ro bị lỗi bộ nhớ
+options.add_argument("--no-sandbox")  # Cần thiết cho môi trường không có GUI như Codespace
+options.add_argument("--disable-dev-shm-usage")  # Giúp tránh lỗi bộ nhớ khi chạy trên container
+options.add_argument("--headless=new") # Chạy Chrome mà không hiển thị giao diện để tránh xung đột
 
 # Khởi tạo WebDriver
-driver = webdriver.Chrome(service = service, options = options)
+service = Service(ChromeDriverManager().install())  # Đảm bảo sử dụng ChromeDriverManager ở đây (thay cho việc dùng path dẫn đến ChromeDriver.exe khi chạy trên máy tính win64
+driver = webdriver.Chrome(service=service, options=options)
 
 # Truy cập url của main page
 main_page_url = 'https://quotes.toscrape.com/'

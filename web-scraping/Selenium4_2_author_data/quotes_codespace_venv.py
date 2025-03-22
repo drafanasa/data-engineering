@@ -1,18 +1,3 @@
-'''
-    It's your turn!!!
-
-    You will use Selenium and scrape following data into an Excel file:
-        author name
-        author birth date
-        author birth place
-
-    Follow the instructions, try to do this by yourself. But if you are stuck,
-    do not hesitate to take a look at that part of the solution and come back.
-
-    url = https://quotes.toscrape.com/  -->  not the JS version!
-
-'''
-
 # Import các thư viện cần thiết
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
@@ -49,10 +34,12 @@ options.add_argument(f"user-agent={user_agent}")
 options.binary_location = "/usr/bin/google-chrome"  # Đường dẫn Chrome trên Linux
 options.add_argument("--no-sandbox")  # Cần thiết cho môi trường không có GUI như Codespace
 options.add_argument("--disable-dev-shm-usage")  # Giúp tránh lỗi bộ nhớ khi chạy trên container
-options.add_argument("--headless=new") # Chạy Chrome mà không hiển thị giao diện để tránh xung đột
+options.add_argument("--headless=chrome")  # Giữ Chrome chạy giống bình thường nhưng không hiển thị giao diện
+options.add_argument("--window-size=1920,1080")  # Đặt kích thước cửa sổ lớn để tránh lỗi layout
+options.add_argument("--disable-gpu")  # Chạy mượt hơn khi headless
 
 # Khởi tạo WebDriver
-service = Service(ChromeDriverManager().install())  # Đảm bảo sử dụng ChromeDriverManager ở đây (thay cho việc dùng path dẫn đến ChromeDriver.exe khi chạy trên máy tính win64
+service = Service(ChromeDriverManager().install())  # Đảm bảo sử dụng ChromeDriverManager ở đây (thay cho việc dùng path dẫn đến ChromeDriver.exe khi chạy trên môi trường win64 của PC)
 driver = webdriver.Chrome(service=service, options=options)
 
 # Truy cập url của main page
@@ -176,7 +163,7 @@ print('\nĐANG XUẤT FILE DATASET...')
 df = pd.DataFrame(author_data_dict)
 
 # Khởi tạo thư mục output nếu chưa tồn tại
-output_folder = 'output'
+output_folder = "/workspaces/data-engineer-portfolio/web-scraping/Selenium4_2_author_data/output"
 os.makedirs(output_folder, exist_ok=True)
 
 # Lưu dữ dataset vào file CSV trong thư mục `output/`

@@ -207,5 +207,4 @@ if df.empty:
 else:
     csv_file_path = os.path.join(output_folder, 'laptop_data.csv')
     df.to_csv(csv_file_path, index=False, encoding='utf-8-sig')
-
-print('Hoàn thành: xuất file CSV vào {csv_file_path}')
+    print('Hoàn thành: xuất file CSV vào {csv_file_path}')

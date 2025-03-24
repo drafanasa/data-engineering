@@ -172,5 +172,5 @@ if df.empty:
 else:
     csv_file_path = os.path.join(output_folder, 'author_data.csv')
     df.to_csv(csv_file_path, index=False, encoding='utf-8-sig')
+    print(f'\n--> Hoàn thành: đã xuất file CSV vào {csv_file_path}')
 
-print(f'\n--> Hoàn thành: đã xuất file CSV vào {csv_file_path}')

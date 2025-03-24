@@ -78,10 +78,10 @@ print(f'\n--> Chọn thể loại "Drama": DONE')
 
 awards_recognition_btn = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.XPATH, '//div[@id="awardsAccordion"]')))
 actions.move_to_element(awards_recognition_btn).click().perform()
-time.sleep(3)
 
 print(f'\n--> Chọn tab "Awards & recognition": DONE')
 
+time.sleep(3)
 best_director_winning_btn = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.XPATH, '//button[@data-testid="test-chip-id-best-director-winning"]')))
 actions.move_to_element(best_director_winning_btn).click().perform()
 

@@ -4,6 +4,10 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager # Dùng webdriver-manager để tự động tải ChromeDriver phù hợp với phiên bản Chrome và môi trường linux64 của Codespace Github
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver import ActionChains
+
 
 import os
 import random
@@ -44,17 +48,14 @@ options.add_argument("--disable-dev-shm-usage")  # Giúp tránh lỗi bộ nhớ
 options.add_argument("--headless=chrome")  # Giữ Chrome chạy giống bình thường nhưng không hiển thị giao diện
 options.add_argument("--window-size=1920,1080")  # Đặt kích thước cửa sổ lớn để tránh lỗi layout
 options.add_argument("--disable-gpu")  # Chạy mượt hơn khi headless
-#options.add_argument("--start-maximized")  # Mở trình duyệt toàn màn hình
-options.add_argument("--disable-infobars")  # Tắt thông báo "Chrome is being controlled"
 options.add_argument("--disable-popup-blocking")  # Ngăn chặn popup
 options.add_argument("--disable-logging")  # Tắt logging không cần thiết
 options.add_argument("--log-level=3")  # Giảm mức độ log về mức thấp nhất
 
-options.add_experimental_option("detach", True)  # Giữ trình duyệt mở sau khi script kết thúc
-
 # Khởi tạo WebDriver
 service = Service(ChromeDriverManager().install())  # Đảm bảo sử dụng ChromeDriverManager ở đây (thay cho việc dùng path dẫn đến ChromeDriver.exe khi chạy trên môi trường win64 của PC)
 driver = webdriver.Chrome(service=service, options=options)
+actions = ActionChains(driver)
 
 # Truy cập trang đích IMDb
 imdb_url = 'https://www.imdb.com/search/title/?explore=genres&title_type=feature'
@@ -68,31 +69,45 @@ accept_cookie(driver) # Nếu phần tử hiện ra và code này hoạt động
 print(f'\n--> Accepting cookies: DONE')
 
 # Chọn thể loại 'Drama' rồi nhấn vào 'Best Director-Winning' trên phàn filter
-drama_btn = driver.find_element(By.XPATH, '//span[text()="Drama"]')
-drama_btn.click()
+
+# Dùng WebDriverWait để chờ và ActionChains để click (tránh lỗi chặn):
+drama_btn = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.XPATH, '//span[text()="Drama"]')))
+actions.move_to_element(drama_btn).click().perform()
+
 print(f'\n--> Chọn thể loại "Drama": DONE')
-driver.implicitly_wait(1)
-awards_recognition_btn = driver.find_element(By.XPATH,'//div[@id="awardsAccordion"]')
-awards_recognition_btn.click()
+
+awards_recognition_btn = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.XPATH, '//div[@id="awardsAccordion"]')))
+actions.move_to_element(awards_recognition_btn).click().perform()
+time.sleep(3)
+
 print(f'\n--> Chọn tab "Awards & recognition": DONE')
-driver.implicitly_wait(1)
-best_director_winning_btn = driver.find_element(By.XPATH, '//button[@data-testid="test-chip-id-best-director-winning"]') # Dựa vào HTML thực tế, Best Director-Winning nằm trong thẻ <button>, có thuộc tính data-testid="test-chip-id-best-director-winning".
-best_director_winning_btn.click()
+
+best_director_winning_btn = WebDriverWait(driver, 3).until(EC.element_to_be_clickable((By.XPATH, '//button[@data-testid="test-chip-id-best-director-winning"]')))
+actions.move_to_element(best_director_winning_btn).click().perform()
+
 print(f'\n--> Chọn điều kiện "Best Director-Winning": DONE')
-driver.implicitly_wait(3)
 
 # Xử lý pagination - Tìm click nút See more đến khi không còn nút See more thì dừng
 print(f'\nĐANG XỬ LÝ PAGINATION SEE MORE ...')
 while True:
-    time.sleep(2)  # Chờ 2s để trang load
-    seemore_buttons = driver.find_elements(By.XPATH, '//span[@class="ipc-see-more__text"]')
-        
-    if not seemore_buttons:  # Nếu không còn nút "See more", dừng vòng lặp
-        print(f'\n--> Không còn nút "See more", xử lý Pagination hoàn tất: DONE')
-        break
+    time.sleep(2)  # Chờ trang load
     
     try:
-        seemore_buttons[0].click()  # Click vào nút See more đầu tiên index[0] (phòng trường hợp có nhiều nút See more)
+        # Tìm tất cả các nút "See more"
+        seemore_buttons = WebDriverWait(driver, 3).until(EC.presence_of_all_elements_located((By.XPATH, '//span[@class="ipc-see-more__text"]')))
+        
+        # Nếu không còn nút "See more", thoát vòng lặp
+        if not seemore_buttons:
+            print(f'\n--> Không còn nút "See more", xử lý Pagination hoàn tất: DONE')
+            break
+
+        # Cuộn xuống nút "See more" trước khi click
+        driver.execute_script("arguments[0].scrollIntoView(true);", seemore_buttons[0])
+        time.sleep(1)  # Chờ sau khi cuộn
+        
+        # Click vào nút "See more" đầu tiên
+        seemore_buttons[0].click()
+
     except Exception as e:
         print(f'\n--> Lỗi: {e}')
         break
@@ -229,7 +244,7 @@ print('\nBẮT ĐẦU XUẤT FILE DATASET...')
 df = pd.DataFrame(director_dict)
 
 # Khởi tạo thư mục output nếu chưa tồn tại
-output_folder = 'output'
+output_folder = '/workspaces/data-engineer-portfolio/web-scraping/Selenium4_4_imdb_director_data/'
 os.makedirs(output_folder, exist_ok=True)  # Tạo folder output
 
 # Lưu dữ dataset vào file CSV trong thư mục `output/`

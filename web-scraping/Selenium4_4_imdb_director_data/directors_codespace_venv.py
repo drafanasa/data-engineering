@@ -1,22 +1,10 @@
-'''
-    It's your turn!!!
-
-    You will find the directors who won 'Best Director' award in Drama genre
-and save their height :)
-
-    Start from this link:
-    https://www.imdb.com/search/title/?explore=genres&title_type=feature
-
-    Let's start, you are ready!
-'''
-
 # Import các thư viện cần thiết
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager # Dùng webdriver-manager để tự động tải ChromeDriver phù hợp với phiên bản Chrome và môi trường linux64 của Codespace Github
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
+
 import os
 import random
 import time
@@ -40,7 +28,6 @@ def accept_cookie(the_driver):
         pass  # Nếu không tìm thấy popup cookie thì bỏ qua
 
 # Cấu hình options của ChromeDriver trên Win64
-service = Service(r"D:\DATA_ENGINEER\Selenium_Driver\chromedriver-win64\chromedriver.exe")
 options = Options()
 
 # Thêm User-Agent vào options
@@ -48,10 +35,16 @@ user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTM
 options.add_argument(f"user-agent={user_agent}") 
 
 # Tắt tải hình ảnh bằng cách chỉnh sửa `prefs`
-prefs = {"profile.managed_default_content_settings.images": 2}
-options.add_experimental_option("prefs", prefs)
+#prefs = {"profile.managed_default_content_settings.images": 2}
+#options.add_experimental_option("prefs", prefs)
 
-options.add_argument("--start-maximized")  # Mở trình duyệt toàn màn hình
+options.binary_location = "/usr/bin/google-chrome"  # Đường dẫn Chrome trên Linux
+options.add_argument("--no-sandbox")  # Cần thiết cho môi trường không có GUI như Codespace
+options.add_argument("--disable-dev-shm-usage")  # Giúp tránh lỗi bộ nhớ khi chạy trên container
+options.add_argument("--headless=chrome")  # Giữ Chrome chạy giống bình thường nhưng không hiển thị giao diện
+options.add_argument("--window-size=1920,1080")  # Đặt kích thước cửa sổ lớn để tránh lỗi layout
+options.add_argument("--disable-gpu")  # Chạy mượt hơn khi headless
+#options.add_argument("--start-maximized")  # Mở trình duyệt toàn màn hình
 options.add_argument("--disable-infobars")  # Tắt thông báo "Chrome is being controlled"
 options.add_argument("--disable-popup-blocking")  # Ngăn chặn popup
 options.add_argument("--disable-logging")  # Tắt logging không cần thiết
@@ -60,7 +53,8 @@ options.add_argument("--log-level=3")  # Giảm mức độ log về mức thấ
 options.add_experimental_option("detach", True)  # Giữ trình duyệt mở sau khi script kết thúc
 
 # Khởi tạo WebDriver
-driver = webdriver.Chrome(service = service, options = options)
+service = Service(ChromeDriverManager().install())  # Đảm bảo sử dụng ChromeDriverManager ở đây (thay cho việc dùng path dẫn đến ChromeDriver.exe khi chạy trên môi trường win64 của PC)
+driver = webdriver.Chrome(service=service, options=options)
 
 # Truy cập trang đích IMDb
 imdb_url = 'https://www.imdb.com/search/title/?explore=genres&title_type=feature'
@@ -245,4 +239,3 @@ else:
     exported_file_path = os.path.join(output_folder, 'director_data.xlsx')
     df.to_excel(exported_file_path, index=False)
     print(f"\nHoàn thành! Dữ liệu đã được lưu vào {exported_file_path}")
-

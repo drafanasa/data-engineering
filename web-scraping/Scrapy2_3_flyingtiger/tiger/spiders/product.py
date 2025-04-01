@@ -34,7 +34,12 @@ class ProductSpider(scrapy.Spider):
 
         tiger_item['product_code'] = response.xpath('//div[@class="product__sku"]/text()').get().split(':')[-1].strip()
 
-        tiger_item['image_url'] = ('https:' + response.css('div.product__media img').attrib['src'].split('?')[0]) # Dùng selector là css vì xpath bị lỗi!
+        # Dùng selector là css vì xpath bị lỗi!
+        img_src = response.css('div.product__media img::attr(src)').get()
+        if img_src:
+            tiger_item['image_urls'] = ['https:' + img_src.split('?')[0]]  # ✔️  Scrapy ImagePipeline mong đợi image_urls phải là một list, do đó lưu ý không được truyền string sẽ làm cho pipeline không hoạt động
+        else:
+            tiger_item['image_urls'] = []
 
         tiger_item['product_url'] = response.url  # URL của trang sản phẩm hiện tại
 

@@ -14,7 +14,7 @@ class TigerImagePipeline(ImagesPipeline):
 
     # Function xử lý ảnh: Gửi request đến từng image_url đã scrap
     def get_media_requests(self, item, info):
-        for image_url in item.get('image_url', []):  # Duyệt qua từng link ảnh
+        for image_url in item.get('image_urls', []):  # ✔️ phải lấy từ image_urls
             yield Request(image_url)  # Gửi request đến image_url -> Scrapy tự biết làm phần còn lại (download it!)
 
     # Function đặt tên file ảnh sau khi tải về

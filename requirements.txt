@@ -9,3 +9,5 @@ webdriver-manager
 openpyxl
 scrapy
 pillow
+matplotlib
+seaborn

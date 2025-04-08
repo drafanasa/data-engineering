@@ -1,0 +1,6 @@
+﻿loai_loi,so_lan
+Timeout,120
+ConnectionRefused,80
+NotFound,60
+InternalError,30
+BadRequest,10

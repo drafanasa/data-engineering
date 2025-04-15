@@ -11,3 +11,5 @@ scrapy
 pillow
 matplotlib
 seaborn
+plotly
+scikit-learn

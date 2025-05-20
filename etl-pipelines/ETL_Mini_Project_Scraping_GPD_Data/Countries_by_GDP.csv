@@ -1,0 +1,215 @@
+Country,Region,GDP_USD_billions
+World,,105568.78
+United States,Americas,26854.6
+China,Asia,19373.59
+Japan,Asia,4409.74
+Germany,Europe,4308.85
+India,Asia,3736.88
+United Kingdom,Europe,3158.94
+France,Europe,2923.49
+Italy,Europe,2169.74
+Canada,Americas,2089.67
+Brazil,Americas,2081.24
+Russia,Europe,2062.65
+South Korea,Asia,1721.91
+Australia,Oceania,1707.55
+Mexico,Americas,1663.16
+Spain,Europe,1492.43
+Indonesia,Asia,1391.78
+Netherlands,Europe,1080.88
+Saudi Arabia,Asia,1061.9
+Turkey,Asia,1029.3
+Switzerland,Europe,869.6
+Taiwan,Asia,790.73
+Poland,Europe,748.89
+Argentina,Americas,641.1
+Belgium,Europe,624.25
+Sweden,Europe,599.05
+Ireland,Europe,594.1
+Thailand,Asia,574.23
+Norway,Europe,554.1
+Israel,Asia,539.22
+Singapore,Asia,515.55
+Austria,Europe,515.2
+Nigeria,Africa,506.6
+United Arab Emirates,Asia,498.98
+Vietnam,Asia,449.09
+Malaysia,Asia,447.03
+Philippines,Asia,440.9
+Bangladesh,Asia,420.52
+Denmark,Europe,405.63
+South Africa,Africa,399.02
+Hong Kong,Asia,382.85
+Egypt,Africa,378.11
+Pakistan,Asia,
+Iran,Asia,367.97
+Chile,Americas,358.56
+Romania,Europe,348.9
+Colombia,Americas,334.69
+Czech Republic,Europe,330.48
+Finland,Europe,301.67
+Peru,Americas,268.24
+Iraq,Asia,267.89
+Portugal,Europe,267.72
+New Zealand,Oceania,251.97
+Kazakhstan,Asia,245.7
+Greece,Europe,239.3
+Qatar,Asia,219.57
+Algeria,Africa,206.01
+Hungary,Europe,188.5
+Kuwait,Asia,164.71
+Ethiopia,Africa,156.08
+Ukraine,Europe,148.71
+Morocco,Africa,138.78
+Slovakia,Europe,127.53
+Ecuador,Americas,121.29
+Dominican Republic,Americas,121.29
+Puerto Rico,Americas,120.84
+Kenya,Africa,118.13
+Angola,Africa,117.88
+Cuba,Americas,
+Oman,Asia,104.9
+Guatemala,Americas,102.31
+Bulgaria,Europe,100.64
+Venezuela,Americas,96.63
+Uzbekistan,Asia,92.33
+Luxembourg,Europe,86.97
+Tanzania,Africa,85.42
+Turkmenistan,Asia,82.65
+Croatia,Europe,78.88
+Lithuania,Europe,78.35
+Costa Rica,Americas,77.78
+Uruguay,Americas,77.31
+Panama,Americas,77.26
+Ivory Coast,Africa,77.05
+Sri Lanka,Asia,
+Serbia,Europe,73.96
+Belarus,Europe,73.54
+Azerbaijan,Asia,70.03
+DR Congo,Africa,69.47
+Slovenia,Europe,68.11
+Ghana,Africa,66.62
+Myanmar,Asia,63.99
+Jordan,Asia,52.06
+Tunisia,Africa,49.82
+Uganda,Africa,49.79
+Cameroon,Africa,48.62
+Latvia,Europe,47.4
+Sudan,Africa,46.7
+Libya,Africa,46.3
+Bolivia,Americas,46.1
+Bahrain,Asia,44.87
+Paraguay,Americas,42.82
+Nepal,Asia,42.1
+Estonia,Europe,41.55
+Macau,Asia,35.84
+El Salvador,Americas,33.75
+Honduras,Americas,32.86
+Papua New Guinea,Oceania,31.36
+Senegal,Africa,31.22
+Cyprus,Asia,30.86
+Cambodia,Asia,30.63
+Zimbabwe,Africa,29.93
+Zambia,Africa,29.27
+Iceland,Europe,28.62
+Bosnia and Herzegovina,Europe,28.49
+Trinidad and Tobago,Americas,28.22
+Georgia,Europe,27.95
+Haiti,Americas,26.58
+Lebanon,Asia,
+Armenia,Asia,23.72
+Guinea,Africa,23.33
+Burkina Faso,Africa,21.08
+Mali,Africa,20.78
+Gabon,Africa,20.33
+Albania,Europe,20.18
+Afghanistan,Asia,
+Mozambique,Africa,19.91
+Palestine,Asia,19.21
+Botswana,Africa,19.57
+Yemen,Asia,19.53
+Malta,Europe,19.4
+Benin,Africa,19.24
+Nicaragua,Americas,17.29
+Jamaica,Americas,17.25
+Mongolia,Asia,16.91
+Niger,Africa,16.62
+Guyana,Americas,16.31
+Brunei,Asia,15.99
+Madagascar,Africa,15.97
+North Korea,Asia,
+Moldova,Europe,15.83
+Syria,Asia,
+North Macedonia,Europe,15.28
+Equatorial Guinea,Africa,15.1
+Mauritius,Africa,14.57
+Bahamas,Americas,14.11
+Laos,Asia,14.09
+Namibia,Africa,13.49
+Rwanda,Africa,13.15
+Congo,Africa,13.03
+Tajikistan,Asia,12.8
+Kyrgyzstan,Asia,12.31
+Chad,Africa,11.96
+Malawi,Africa,11.28
+Mauritania,Africa,10.97
+New Caledonia,Oceania,
+Kosovo,Europe,9.99
+Togo,Africa,9.0
+Somalia,Africa,8.74
+Monaco,Europe,
+Bermuda,Americas,
+Montenegro,Europe,7.03
+South Sudan,Africa,7.01
+Maldives,Asia,7.0
+Liechtenstein,Europe,
+Barbados,Americas,6.12
+French Polynesia,Oceania,
+Cayman Islands,Americas,
+Fiji,Oceania,5.38
+Eswatini,Africa,4.82
+Liberia,Africa,4.38
+Djibouti,Africa,3.92
+Andorra,Europe,3.67
+Aruba,Americas,3.63
+Sierra Leone,Africa,3.52
+Suriname,Americas,3.47
+Burundi,Africa,3.23
+Belize,Americas,3.16
+Greenland,Americas,
+Central African Republic,Africa,2.74
+Curaçao,Americas,
+Bhutan,Asia,2.68
+Eritrea,Africa,2.67
+Lesotho,Africa,2.58
+Cape Verde,Africa,2.47
+Gambia,Africa,2.28
+Saint Lucia,Americas,2.26
+East Timor,Asia,1.99
+Seychelles,Africa,1.95
+Guinea-Bissau,Africa,1.89
+Antigua and Barbuda,Americas,1.86
+San Marino,Europe,1.81
+Zanzibar,Africa,
+Solomon Islands,Oceania,1.7
+British Virgin Islands,Americas,
+Comoros,Africa,1.35
+Grenada,Americas,1.27
+Vanuatu,Oceania,1.06
+Saint Kitts and Nevis,Americas,1.05
+Saint Vincent and the Grenadines,Americas,1.04
+Turks and Caicos Islands,Americas,
+Samoa,Oceania,0.9
+Sint Maarten,Americas,
+Dominica,Americas,0.68
+São Tomé and Príncipe,Africa,0.62
+Tonga,Oceania,0.54
+Micronesia,Oceania,0.46
+Marshall Islands,Oceania,0.29
+Cook Islands,Oceania,
+Palau,Oceania,0.26
+Anguilla,Americas,
+Kiribati,Oceania,0.25
+Nauru,Oceania,0.15
+Montserrat,Americas,
+Tuvalu,Oceania,0.06
